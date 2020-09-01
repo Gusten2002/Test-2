@@ -7,26 +7,28 @@ namespace Test_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Random generator = new Random();
+            // Console.WriteLine("Hello World!");
 
             // File.WriteAllText("Words.txt", "Thing");
             // String s = File.ReadAllText("words.txt");
 
             // Console.WriteLine(s);
 
-            // string [] words = {"Hat", "Coat", "Pants"};
+            string [] words = {"Hat", "Coat", "Pants", "Gloves", "Cap"};
 
-            // File.WriteAllLines("words.txt", words);
+            File.WriteAllLines("words.txt", words);
 
-            if (File.Exists("words.txt"))
-            {
-            string [] words = File.ReadAllLines("words.txt");
+            // if (File.Exists("words.txt"))
+            // {
+            words = File.ReadAllLines("words.txt");
 
-            Console.WriteLine(words[0]);
+            int randomnumber = generator.Next(0,5);
 
+            Console.WriteLine(words[randomnumber]);
+
+            // }
             Console.ReadLine();
-
-            }
 
         }
     }

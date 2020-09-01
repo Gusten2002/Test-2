@@ -1,3 +1,5 @@
 Hat
 Coat
 Pants
+Gloves
+Cap
